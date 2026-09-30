@@ -9,7 +9,7 @@ import Button from "@/components/common/Button";
  * Leave it empty to keep the current still image. The image is also used as the poster
  * while the video loads. The WebGL lens/parallax effect runs on the video too.
  */
-const HERO_VIDEO = "/videos/video.mp4";
+const HERO_VIDEO = "/videos/video30.mp4";
 
 export default function Hero({ videoSrc = HERO_VIDEO, image = project1 }) {
   return (

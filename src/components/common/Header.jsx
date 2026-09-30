@@ -15,6 +15,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // freeze page scroll behind the full-screen menu
+  useEffect(() => {
+    if (!menu) return;
+    const prev = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    return () => {
+      document.documentElement.style.overflow = prev;
+    };
+  }, [menu]);
+
   return (
     <header className={`site-header${scrolled || menu ? " is-solid" : ""}`}>
       <a className="logo" href="#home" aria-label="NOVA Development home">

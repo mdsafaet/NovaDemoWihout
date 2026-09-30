@@ -31,3 +31,10 @@ html.lenis,html.lenis body{height:auto}
 
 /* ---- Sticky header: transparent over the hero, solid brand blue once scrolled ---- */
 .site-header.is-solid{background:var(--blue);padding-top:14px;padding-bottom:14px;box-shadow:0 6px 24px #0f131f33}
+
+/* ---- Presence: city bird's-eye background (z-index 0 keeps it under the WebGL canvas, which is z-index 1) ---- */
+.presence>.presence-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.presence-bg-img{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.08);transition:opacity 1s ease,transform 7s ease}
+.presence-bg-img.active{opacity:1;transform:scale(1)}
+.presence-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#112899f2 0%,#112899cc 45%,#112899a6 100%)}
+@media(max-width:800px){.presence-bg::after{background:linear-gradient(180deg,#112899e6,#112899cc)}}

@@ -6,6 +6,17 @@ import { markets } from "@/data/markets";
 export default function Presence({ market, onMarketChange }) {
   return (
     <section className="presence section" id="presence">
+      {/* City bird's-eye backgrounds: the active market cross-fades in */}
+      <div className="presence-bg" aria-hidden="true">
+        {markets.map((m) => (
+          <div
+            key={m.name}
+            className={`presence-bg-img${m.name === market ? " active" : ""}`}
+            style={{ backgroundImage: `url(${m.image})` }}
+          />
+        ))}
+      </div>
+
       <div className="presence-intro">
         <p className="eyebrow">CONNECTED BY AMBITION</p>
         <h2>Global reach.<br /><em>Local understanding.</em></h2>

@@ -1,0 +1,7 @@
+// `flag` is an ISO 3166-1 alpha-2 code, used by <Flag code="..." /> (country-flag-icons).
+export const markets = [
+  { name: "Dubai", country: "United Arab Emirates", flag: "AE", status: "Operating", text: "Our Gulf platform brings a global perspective to residential and investment-led development.", address: "Level 24, Boulevard Plaza, Downtown Dubai, United Arab Emirates" },
+  { name: "Dhaka", country: "Bangladesh", flag: "BD", status: "Operating", text: "Where our story began. Master-planned land estates and communities shaped by local knowledge and long-term thinking.", address: "Nova Land Tower, Gulshan Avenue, Gulshan 2, Dhaka 1212, Bangladesh" },
+  { name: "New York", country: "United States", flag: "US", status: "Expanding", text: "Extending our development platform through commercial opportunities and strategic partnerships in North America.", address: "One World Trade Center, Floor 62, New York, NY 10007, USA" },
+  { name: "London", country: "United Kingdom", flag: "GB", status: "Entering", text: "A new chapter in our global presence, guided by the same commitment to design, engineering and stewardship.", address: "One Canada Square, Canary Wharf, London E14 5AB, United Kingdom" },
+];

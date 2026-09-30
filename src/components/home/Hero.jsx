@@ -14,7 +14,7 @@ const HERO_VIDEO = "/videos/video30.mp4";
 export default function Hero({ videoSrc = HERO_VIDEO, image = project1 }) {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
-      <img className="hero-image" src={image} alt="Contemporary residence overlooking a tranquil pool" fetchPriority="high" />
+      {/* <img className="hero-image" src={image} alt="Contemporary residence overlooking a tranquil pool" fetchPriority="high" /> */}
       {videoSrc && (
         <video className="hero-video" src={videoSrc} poster={image} autoPlay muted loop playsInline preload="auto" aria-hidden="true" />
       )}

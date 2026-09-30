@@ -15,9 +15,18 @@ export default function Hero({ videoSrc = HERO_VIDEO, image = project1 }) {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
       {/* <img className="hero-image" src={image} alt="Contemporary residence overlooking a tranquil pool" fetchPriority="high" /> */}
-      {videoSrc && (
-        <video className="hero-video" src={videoSrc} poster={image} autoPlay muted loop playsInline preload="auto" aria-hidden="true" />
-      )}
+ {videoSrc && (
+  <video
+    className="hero-video"
+    src={videoSrc}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    aria-hidden="true"
+  />
+)}
       <div className="hero-shade" />
       <div className="hero-content">
         <p className="eyebrow"><span /> A GLOBAL VISION. A PERSONAL SENSE OF PLACE.</p>
